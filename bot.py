@@ -5,7 +5,7 @@ from aiogram.utils import executor
 import requests
 import json
 
-bot = Bot(token='Ваш токен')
+bot = Bot(token='Ваш токен для бота телеграмм')
 dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def process_start_command(message: types.Message):
@@ -20,7 +20,7 @@ async def process_help_command(message: types.Message):
 async def weather(msg: types.Message):
 	city = msg.text
 	req = requests.get("http://api.openweathermap.org/data/2.5/weather",
-	params={'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': '2fb5ab71084bea6a366d8b75837ae5cf'})
+	params={'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': 'Ваш токен от сервиса openweathermap'})
 	data = req.json()
 	if data:
 		data_weather = []
