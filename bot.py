@@ -5,7 +5,7 @@ from aiogram.utils import executor
 import requests
 import json
 
-bot = Bot(token='1515870254:AAETBNnrxjzwJT7K1E0eZVyNfZgfbl3lcPM')
+bot = Bot(token='Ваш токен')
 dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def process_start_command(message: types.Message):
